@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".SecondActivity">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--LEFT-->
+    <EditText
+        android:id="@+id/et_host"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="192.168.1.172"
+        android:textColor="#ffffff"
+        android:textColorHint="#dddddd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_port"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="9999"
+        android:textColor="#ffffff"
+        android:textColorHint="#dddddd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@id/et_host" />
+
+    <Button
+        android:id="@+id/btn_connect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CONNECT"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@id/et_port" />
+
+    <TextView
+        android:id="@+id/tv_receive"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        android:text="xxx"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/divider"
+        app:layout_constraintTop_toBottomOf="@id/btn_connect" />
+
+    <!--RIGHT-->
+    <EditText
+        android:id="@+id/et_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="message"
+        android:textColor="#ffffff"
+        android:textColorHint="#dddddd"
+        app:layout_constraintLeft_toRightOf="@id/divider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_host" />
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CONNECT"
+        app:layout_constraintLeft_toRightOf="@id/divider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_port" />
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/divider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_send" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
